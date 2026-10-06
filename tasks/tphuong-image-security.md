@@ -71,4 +71,3 @@ Không cập nhật Docker Engine/Compose, daemon, network, firewall, VM package
 - [ ] Phân loại false positive/không áp dụng có lý do.
 - [ ] Có smoke test và so sánh định lượng trước/sau.
 - [ ] Không làm thay đổi baseline hoặc image dùng chung.
-

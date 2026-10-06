@@ -69,4 +69,3 @@ Không sửa libvirt network, IP, NIC NAT, Docker daemon, firewall, AppArmor/Sec
 - [ ] Bằng chứng trước/sau dùng cùng điều kiện.
 - [ ] Hardening theo least privilege và có retest.
 - [ ] Tài nguyên tạm đã được kiểm kê và dọn sạch.
-

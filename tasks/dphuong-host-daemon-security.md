@@ -72,4 +72,3 @@ Không sửa `daemon.json`, systemd unit, socket permission, membership nhóm `d
 - [ ] Không expose Docker daemon hoặc Internet.
 - [ ] So sánh trước/sau có cùng test case.
 - [ ] Cleanup và kiểm tra listener/mount cuối đã đạt.
-

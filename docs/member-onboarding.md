@@ -17,10 +17,10 @@ Không clone bằng token ghi trực tiếp trong URL và không lưu credential
 
 ## 2. Chọn đúng nhiệm vụ
 
-- Thành viên 2: `tasks/member-2-container-security.md`
-- Thành viên 3: `tasks/member-3-host-daemon-security.md`
-- Thành viên 4: `tasks/member-4-image-security.md`
-- Thành viên 5: `tasks/member-5-hardening-detection.md`
+- Thành viên 2 (`bphuong`): `tasks/bphuong-container-security.md`
+- Thành viên 3 (`dphuong`): `tasks/dphuong-host-daemon-security.md`
+- Thành viên 4 (`tphuong`): `tasks/tphuong-image-security.md`
+- Thành viên 5 (`tquy`): `tasks/tquy-hardening-detection.md`
 
 Đọc thêm `AGENTS.md`, `TASKS.md`, [baseline manifest](baseline-manifest.md) và tài liệu nhiệm vụ trước khi tạo file LAB.
 
