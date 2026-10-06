@@ -1,5 +1,7 @@
 # Kế hoạch chuẩn hóa môi trường
 
+> Tài liệu này lưu lại đánh giá trước khi LAB được dựng. Thành viên mới không dùng phần snapshot cũ làm baseline hiện hành; hãy dùng [baseline-manifest.md](baseline-manifest.md) và [member-lab-setup.md](member-lab-setup.md).
+
 ## Snapshot kiểm tra ngày 2026-10-07
 
 Các lệnh chỉ đọc đã dùng: `sed -n '1,80p' /etc/os-release`, `uname -srmo`, `docker --version`, `docker version` và `docker compose version`.

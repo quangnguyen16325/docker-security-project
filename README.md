@@ -19,6 +19,9 @@ Chi tiết xem [docs/environment.md](docs/environment.md). Quy trình xem [docs/
 
 Tài liệu điều phối của trưởng nhóm:
 
+- [Onboarding thành viên](docs/member-onboarding.md)
+- [Hướng dẫn thành viên dựng LAB từ đầu](docs/member-lab-setup.md)
+- [Baseline manifest](docs/baseline-manifest.md)
 - [Kế hoạch chuẩn hóa môi trường](docs/setup-plan.md)
 - [Kiến trúc LAB](docs/lab-architecture.md)
 - [Checklist kiểm thử môi trường](docs/environment-checklist.md)
@@ -35,6 +38,8 @@ Tài liệu điều phối của trưởng nhóm:
 ├── 04-hardening-detection/    # Hardening, audit, logging, detection
 ├── 05-integration/            # Tích hợp, retest và đánh giá
 ├── docs/                      # Thiết kế LAB và kế hoạch nghiên cứu
+├── scripts/                   # Script kiểm tra LAB chỉ đọc
+├── tasks/                     # Giao nhiệm vụ chi tiết cho từng thành viên
 ├── report/                    # Báo cáo học phần
 └── slides/                    # Slide thuyết trình
 ```
