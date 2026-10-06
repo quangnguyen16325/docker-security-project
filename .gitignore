@@ -1,0 +1,46 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*credentials*
+*secret*
+
+# Personal communication and rollback metadata
+/emails/
+/docs/rollback/
+
+# Generated logs, reports, scans, and caches
+*.log
+*.tmp
+*.cache
+/.cache/
+**/.cache/
+/reports/generated/
+/report/generated/
+trivy-cache/
+*.sarif
+
+# VM, container, and archive artifacts
+*.qcow2
+*.img
+*.iso
+*.tar
+*.tar.gz
+*.zip
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Language caches
+__pycache__/
+*.py[cod]
+node_modules/
