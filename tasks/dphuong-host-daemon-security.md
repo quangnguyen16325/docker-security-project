@@ -66,7 +66,7 @@ Không sửa `daemon.json`, systemd unit, socket permission, membership nhóm `d
 
 ## 13. Checklist để trưởng nhóm review
 
-- [ ] Trust boundary và rủi ro host impact đã rõ.
+- [x] Đã lập dự thảo trust boundary và rủi ro host impact trong `02-host-security/threat-model.md`; chờ trưởng nhóm review.
 - [ ] Dùng dữ liệu/thư mục giả, không đọc dữ liệu thật.
 - [ ] Command, snapshot và rollback đã được duyệt.
 - [ ] Không expose Docker daemon hoặc Internet.
