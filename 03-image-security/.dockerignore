@@ -1,0 +1,15 @@
+
+.git
+
+.gitignore
+
+*.md
+
+*.log
+
+.env
+
+Dockerfile*
+
+trivy-cache/
+
