@@ -1,31 +1,54 @@
+# STAGE 1: Builder
 
 FROM python:3.11-slim AS builder
 
-WORKDIR /build
 
-COPY requirements.txt .
-
-RUN pip install --user --no-cache-dir -r requirements.txt
-
-
-
-FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN groupadd -g 10001 appgroup && useradd -u 10001 -g appgroup -s /bin/false appuser
+COPY requirements.txt .
 
-COPY --from=builder /root/.local /home/appuser/.local
+
+
+RUN pip install --no-cache-dir --upgrade pip && \
+
+    pip install --no-cache-dir --prefix=/install flask>=3.0.3 werkzeug>=3.0.3 jinja2>=3.1.4 requests>=2.32.2
+
+
+
+# STAGE 2: Runtime
+
+FROM python:3.11-slim AS runtime
+
+
+
+RUN groupadd -g 10001 appgroup && \
+
+    useradd -u 10001 -g appgroup -s /bin/false appuser
+
+
+
+WORKDIR /app
+
+
+
+COPY --from=builder /install /usr/local
 
 COPY app.py .
 
+
+
 RUN chown -R appuser:appgroup /app
 
-USER appuser
 
-ENV PATH=/home/appuser/.local/bin:$PATH
+
+USER appuser:appgroup
+
+
 
 EXPOSE 5000
 
-CMD ["python", "app.py"]
 
+
+CMD ["python", "app.py"]
+ 

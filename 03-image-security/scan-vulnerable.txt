@@ -1,31 +1,45 @@
 
 Report Summary
 
-┌─────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
-│                                   Target                                    │    Type    │ Vulnerabilities │ Secrets │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ app:vulnerable (debian 12.7)                                                │   debian   │       117       │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/Flask-2.0.1.dist-info/METADATA        │ python-pkg │        1        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/MarkupSafe-2.1.5.dist-info/METADATA   │ python-pkg │        0        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/Werkzeug-2.0.1.dist-info/METADATA     │ python-pkg │        2        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/click-8.1.8.dist-info/METADATA        │ python-pkg │        0        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/itsdangerous-2.2.0.dist-info/METADATA │ python-pkg │        0        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/jinja2-3.1.6.dist-info/METADATA       │ python-pkg │        0        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/pip-23.0.1.dist-info/METADATA         │ python-pkg │        0        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/setuptools-57.5.0.dist-info/METADATA  │ python-pkg │        3        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ usr/local/lib/python3.8/site-packages/wheel-0.44.0.dist-info/METADATA       │ python-pkg │        1        │    -    │
-├─────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
-│ app:vulnerable                                                              │    text    │        -        │    2    │
-└─────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┘
+┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
+│                                      Target                                      │    Type    │ Vulnerabilities │ Secrets │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ app:vulnerable (debian 12.7)                                                     │   debian   │       168       │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/Flask-2.2.5.dist-info/METADATA             │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/Jinja2-3.1.2.dist-info/METADATA            │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/MarkupSafe-2.1.5.dist-info/METADATA        │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/Werkzeug-2.2.3.dist-info/METADATA          │ python-pkg │        1        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/certifi-2026.10.23.dist-info/METADATA      │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/charset_normalizer-3.5.2.dist-info/METADA- │ python-pkg │        0        │    -    │
+│ TA                                                                               │            │                 │         │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/click-8.1.8.dist-info/METADATA             │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/idna-3.15.dist-info/METADATA               │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/importlib_metadata-8.5.0.dist-info/METADA- │ python-pkg │        0        │    -    │
+│ TA                                                                               │            │                 │         │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/itsdangerous-2.2.0.dist-info/METADATA      │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/pip-23.0.1.dist-info/METADATA              │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/requests-2.31.0.dist-info/METADATA         │ python-pkg │        0        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/setuptools-57.5.0.dist-info/METADATA       │ python-pkg │        3        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/urllib3-2.2.3.dist-info/METADATA           │ python-pkg │        6        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/wheel-0.44.0.dist-info/METADATA            │ python-pkg │        1        │    -    │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+│ usr/local/lib/python3.8/site-packages/zipp-3.20.2.dist-info/METADATA             │ python-pkg │        0        │    -    │
+└──────────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┘
 Legend:
 - '-': Not scanned
 - '0': Clean (no security findings detected)
@@ -33,26 +47,22 @@ Legend:
 
 app:vulnerable (debian 12.7)
 ============================
-Total: 117 (HIGH: 108, CRITICAL: 9)
+Total: 168 (HIGH: 159, CRITICAL: 9)
 
 ┌────────────────────┬─────────────────┬──────────┬──────────────┬────────────────────┬────────────────────┬──────────────────────────────────────────────────────────────┐
 │      Library       │  Vulnerability  │ Severity │    Status    │ Installed Version  │   Fixed Version    │                            Title                             │
 ├────────────────────┼─────────────────┼──────────┼──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ bsdutils           │ CVE-2026-53613  │ HIGH     │ affected     │ 1:2.38.1-5+deb12u1 │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ apt                │ CVE-2026-109518 │ HIGH     │ fixed        │ 2.6.1              │ 2.6.2              │ apt: apt: Remote code execution via hard link reuse during   │
+│                    │                 │          │              │                    │                    │ package download...                                          │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-109518                  │
+├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ bsdutils           │ CVE-2026-53613  │          │ affected     │ 1:2.38.1-5+deb12u1 │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -70,21 +80,17 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │                 │          │              │                    │                    │ functions                                                    │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-54369                   │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libblkid1          │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ libapt-pkg6.0      │ CVE-2026-109518 │          │ fixed        │ 2.6.1              │ 2.6.2              │ apt: apt: Remote code execution via hard link reuse during   │
+│                    │                 │          │              │                    │                    │ package download...                                          │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-109518                  │
+├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libblkid1          │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -99,12 +105,28 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2024-28757  │          │              │                    │ 2.5.0-1+deb12u4    │ expat: XML Entity Expansion                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2024-28757                   │
-│                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2025-59375  │          │              │                    │                    │ firefox: thunderbird: expat: libexpat in Expat allows        │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2025-59375  │          │              │                    │ 2.5.0-1+deb12u5    │ firefox: thunderbird: expat: libexpat in Expat allows        │
 │                    │                 │          │              │                    │                    │ attackers to trigger large dynamic...                        │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
-│                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-25210  │          │              │                    │                    │ libexpat: libexpat: Information disclosure and data          │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-113351 │          │ fix_deferred │                    │                    │ expat: expat: Denial of Service via improper memory tracking │
+│                    │                 │          │              │                    │                    │ in XML_ParserReset                                           │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-113351                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-115506 │          │              │                    │                    │ expat: expat: Denial of Service via delayed entity           │
+│                    │                 │          │              │                    │                    │ amplification detection                                      │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-115506                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-117610 │          │ affected     │                    │                    │ expat: expat: Denial of Service via NULL pointer dereference │
+│                    │                 │          │              │                    │                    │ in external entity...                                        │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-117610                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-118370 │          │              │                    │                    │ expat: expat: Denial of Service via integer overflow during  │
+│                    │                 │          │              │                    │                    │ XML attribute parsing...                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-118370                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-25210  │          │ fixed        │                    │ 2.5.0-1+deb12u4    │ libexpat: libexpat: Information disclosure and data          │
 │                    │                 │          │              │                    │                    │ integrity issues due to integer overflow...                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-25210                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
@@ -118,12 +140,12 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │ CVE-2026-76957  │          │              │                    │ 2.5.0-1+deb12u3    │ libexpat: libexpat: Memory corruption vulnerability allows   │
 │                    │                 │          │              │                    │                    │ arbitrary code execution or denial of...                     │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76957                   │
-│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-77214  │          │ affected     │                    │                    │ expat: expat: Information disclosure via heap buffer         │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-77214  │          │              │                    │ 2.5.0-1+deb12u5    │ expat: expat: Information disclosure via heap buffer         │
 │                    │                 │          │              │                    │                    │ over-read in XML_ParseBuffer                                 │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-77214                   │
-│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-93990  │          │ fixed        │                    │ 2.5.0-1+deb12u4    │ expat: Expat: XML Injection via Malformed UTF-16 Input       │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-93990  │          │              │                    │ 2.5.0-1+deb12u4    │ expat: Expat: XML Injection via Malformed UTF-16 Input       │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-93990                   │
 ├────────────────────┼─────────────────┼──────────┤              ├────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
 │ libgnutls30        │ CVE-2026-33845  │ CRITICAL │              │ 3.7.9-2+deb12u3    │ 3.7.9-2+deb12u7    │ gnutls: GnuTLS: Denial of Service via DTLS zero-length       │
@@ -151,57 +173,273 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │ CVE-2026-42009  │          │              │                    │                    │ gnutls: gnutls: Denial of Service via DTLS packet reordering │
 │                    │                 │          │              │                    │                    │ vulnerability                                                │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-42009                   │
-├────────────────────┼─────────────────┤          │              ├────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libgssapi-krb5-2   │ CVE-2026-40355  │          │              │ 1.20.1-2+deb12u2   │ 1.20.1-2+deb12u5   │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
+├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libgssapi-krb5-2   │ CVE-2026-107364 │          │ affected     │ 1.20.1-2+deb12u2   │                    │ krb5: Unauthenticated KDC DoS based on ASN.1 decoder read    │
+│                    │                 │          │              │                    │                    │ overrun                                                      │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-107364                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112315 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS in    │
+│                    │                 │          │              │                    │                    │ RPCSEC_GSS buffer decode...                                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112315                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112316 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory leak DoS in      │
+│                    │                 │          │              │                    │                    │ xdr_krb5_tl_data() decode failure...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112316                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112317 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB    │
+│                    │                 │          │              │                    │                    │ keytab key...                                                │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112317                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112318 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated DoS exploiting          │
+│                    │                 │          │              │                    │                    │ dereference of null policy name...                           │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112318                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112319 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory exhaustion DoS   │
+│                    │                 │          │              │                    │                    │ via unbounded RPC XDR...                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112319                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112320 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ GSS-RPC auth flavor...                                       │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112320                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112321 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI_INIT error paths...                              │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112321                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112322 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated CPU DoS via           │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI client states cleanup...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112322                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112323 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory exhaustion via │
+│                    │                 │          │              │                    │                    │ failed AUTH_GSSAPI_INIT requests                             │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112323                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-118380 │          │              │                    │                    │ krb5: kadmind: request alteration and protected information  │
+│                    │                 │          │              │                    │                    │ disclosure                                                   │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-118380                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119079 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic     │
+│                    │                 │          │              │                    │                    │ ASN.1 SEQUENCE OF...                                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119079                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-40355  │          │ fixed        │                    │ 1.20.1-2+deb12u5   │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
 │                    │                 │          │              │                    │                    │ dereference in...                                            │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40355                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-40356  │          │              │                    │                    │ krb5: MIT Kerberos 5 (krb5): Denial of Service via integer   │
 │                    │                 │          │              │                    │                    │ underflow and...                                             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40356                   │
-├────────────────────┼─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
-│ libk5crypto3       │ CVE-2026-40355  │          │              │                    │                    │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71199  │          │ affected     │                    │                    │ krb5: Alteration of authentication indicators in CAMMAC      │
+│                    │                 │          │              │                    │                    │ container                                                    │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71199                   │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71200  │          │              │                    │                    │ krb5: Unauthenticated KDC NULL pointer dereference KDC DoS   │
+│                    │                 │          │              │                    │                    │ via crafted PKINIT pre-auth...                               │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71200                   │
+├────────────────────┼─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libk5crypto3       │ CVE-2026-107364 │          │              │                    │                    │ krb5: Unauthenticated KDC DoS based on ASN.1 decoder read    │
+│                    │                 │          │              │                    │                    │ overrun                                                      │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-107364                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112315 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS in    │
+│                    │                 │          │              │                    │                    │ RPCSEC_GSS buffer decode...                                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112315                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112316 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory leak DoS in      │
+│                    │                 │          │              │                    │                    │ xdr_krb5_tl_data() decode failure...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112316                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112317 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB    │
+│                    │                 │          │              │                    │                    │ keytab key...                                                │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112317                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112318 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated DoS exploiting          │
+│                    │                 │          │              │                    │                    │ dereference of null policy name...                           │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112318                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112319 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory exhaustion DoS   │
+│                    │                 │          │              │                    │                    │ via unbounded RPC XDR...                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112319                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112320 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ GSS-RPC auth flavor...                                       │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112320                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112321 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI_INIT error paths...                              │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112321                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112322 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated CPU DoS via           │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI client states cleanup...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112322                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112323 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory exhaustion via │
+│                    │                 │          │              │                    │                    │ failed AUTH_GSSAPI_INIT requests                             │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112323                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-118380 │          │              │                    │                    │ krb5: kadmind: request alteration and protected information  │
+│                    │                 │          │              │                    │                    │ disclosure                                                   │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-118380                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119079 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic     │
+│                    │                 │          │              │                    │                    │ ASN.1 SEQUENCE OF...                                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119079                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-40355  │          │ fixed        │                    │ 1.20.1-2+deb12u5   │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
 │                    │                 │          │              │                    │                    │ dereference in...                                            │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40355                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-40356  │          │              │                    │                    │ krb5: MIT Kerberos 5 (krb5): Denial of Service via integer   │
 │                    │                 │          │              │                    │                    │ underflow and...                                             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40356                   │
-├────────────────────┼─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
-│ libkrb5-3          │ CVE-2026-40355  │          │              │                    │                    │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71199  │          │ affected     │                    │                    │ krb5: Alteration of authentication indicators in CAMMAC      │
+│                    │                 │          │              │                    │                    │ container                                                    │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71199                   │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71200  │          │              │                    │                    │ krb5: Unauthenticated KDC NULL pointer dereference KDC DoS   │
+│                    │                 │          │              │                    │                    │ via crafted PKINIT pre-auth...                               │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71200                   │
+├────────────────────┼─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libkrb5-3          │ CVE-2026-107364 │          │              │                    │                    │ krb5: Unauthenticated KDC DoS based on ASN.1 decoder read    │
+│                    │                 │          │              │                    │                    │ overrun                                                      │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-107364                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112315 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS in    │
+│                    │                 │          │              │                    │                    │ RPCSEC_GSS buffer decode...                                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112315                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112316 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory leak DoS in      │
+│                    │                 │          │              │                    │                    │ xdr_krb5_tl_data() decode failure...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112316                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112317 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB    │
+│                    │                 │          │              │                    │                    │ keytab key...                                                │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112317                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112318 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated DoS exploiting          │
+│                    │                 │          │              │                    │                    │ dereference of null policy name...                           │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112318                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112319 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory exhaustion DoS   │
+│                    │                 │          │              │                    │                    │ via unbounded RPC XDR...                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112319                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112320 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ GSS-RPC auth flavor...                                       │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112320                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112321 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI_INIT error paths...                              │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112321                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112322 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated CPU DoS via           │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI client states cleanup...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112322                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112323 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory exhaustion via │
+│                    │                 │          │              │                    │                    │ failed AUTH_GSSAPI_INIT requests                             │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112323                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-118380 │          │              │                    │                    │ krb5: kadmind: request alteration and protected information  │
+│                    │                 │          │              │                    │                    │ disclosure                                                   │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-118380                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119079 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic     │
+│                    │                 │          │              │                    │                    │ ASN.1 SEQUENCE OF...                                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119079                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-40355  │          │ fixed        │                    │ 1.20.1-2+deb12u5   │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
 │                    │                 │          │              │                    │                    │ dereference in...                                            │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40355                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-40356  │          │              │                    │                    │ krb5: MIT Kerberos 5 (krb5): Denial of Service via integer   │
 │                    │                 │          │              │                    │                    │ underflow and...                                             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40356                   │
-├────────────────────┼─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
-│ libkrb5support0    │ CVE-2026-40355  │          │              │                    │                    │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71199  │          │ affected     │                    │                    │ krb5: Alteration of authentication indicators in CAMMAC      │
+│                    │                 │          │              │                    │                    │ container                                                    │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71199                   │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71200  │          │              │                    │                    │ krb5: Unauthenticated KDC NULL pointer dereference KDC DoS   │
+│                    │                 │          │              │                    │                    │ via crafted PKINIT pre-auth...                               │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71200                   │
+├────────────────────┼─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libkrb5support0    │ CVE-2026-107364 │          │              │                    │                    │ krb5: Unauthenticated KDC DoS based on ASN.1 decoder read    │
+│                    │                 │          │              │                    │                    │ overrun                                                      │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-107364                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112315 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS in    │
+│                    │                 │          │              │                    │                    │ RPCSEC_GSS buffer decode...                                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112315                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112316 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory leak DoS in      │
+│                    │                 │          │              │                    │                    │ xdr_krb5_tl_data() decode failure...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112316                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112317 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated memory leak DoS in KDB    │
+│                    │                 │          │              │                    │                    │ keytab key...                                                │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112317                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112318 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated DoS exploiting          │
+│                    │                 │          │              │                    │                    │ dereference of null policy name...                           │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112318                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112319 │          │              │                    │                    │ krb5: MIT krb5 kadmind authenticated memory exhaustion DoS   │
+│                    │                 │          │              │                    │                    │ via unbounded RPC XDR...                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112319                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112320 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ GSS-RPC auth flavor...                                       │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112320                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112321 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory leak DoS via   │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI_INIT error paths...                              │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112321                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112322 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated CPU DoS via           │
+│                    │                 │          │              │                    │                    │ AUTH_GSSAPI client states cleanup...                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112322                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-112323 │          │              │                    │                    │ krb5: MIT krb5 kadmind unauthenticated memory exhaustion via │
+│                    │                 │          │              │                    │                    │ failed AUTH_GSSAPI_INIT requests                             │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-112323                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-118380 │          │              │                    │                    │ krb5: kadmind: request alteration and protected information  │
+│                    │                 │          │              │                    │                    │ disclosure                                                   │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-118380                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119079 │          │              │                    │                    │ krb5: MIT krb5 KDC unauthenticated CPU DoS via quadratic     │
+│                    │                 │          │              │                    │                    │ ASN.1 SEQUENCE OF...                                         │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119079                  │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-40355  │          │ fixed        │                    │ 1.20.1-2+deb12u5   │ krb5: MIT Kerberos 5: Denial of Service via NULL pointer     │
 │                    │                 │          │              │                    │                    │ dereference in...                                            │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40355                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-40356  │          │              │                    │                    │ krb5: MIT Kerberos 5 (krb5): Denial of Service via integer   │
 │                    │                 │          │              │                    │                    │ underflow and...                                             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-40356                   │
-├────────────────────┼─────────────────┤          │              ├────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ liblzma5           │ CVE-2025-31115  │          │              │ 5.4.1-0.2          │ 5.4.1-1            │ xz: XZ has a heap-use-after-free bug in threaded .xz decoder │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71199  │          │ affected     │                    │                    │ krb5: Alteration of authentication indicators in CAMMAC      │
+│                    │                 │          │              │                    │                    │ container                                                    │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71199                   │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-71200  │          │              │                    │                    │ krb5: Unauthenticated KDC NULL pointer dereference KDC DoS   │
+│                    │                 │          │              │                    │                    │ via crafted PKINIT pre-auth...                               │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-71200                   │
+├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ liblzma5           │ CVE-2025-31115  │          │ fixed        │ 5.4.1-0.2          │ 5.4.1-1            │ xz: XZ has a heap-use-after-free bug in threaded .xz decoder │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2025-31115                   │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libmount1          │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ libmount1          │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -238,21 +476,13 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │                 │          │              │                    │                    │ pcre2_jit_match                                              │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-89161                   │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libsmartcols1      │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ libsmartcols1      │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -274,6 +504,18 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │ CVE-2026-11824  │          │              │                    │                    │ sqlite: SQLite: Arbitrary code execution and crash via       │
 │                    │                 │          │              │                    │                    │ heap-based buffer overflow in...                             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-11824                   │
+│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119373 │          │ affected     │                    │                    │ sqlite: sqlite: Denial of service via heap-based buffer      │
+│                    │                 │          │              │                    │                    │ overflow in FTS5                                             │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119373                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119374 │          │              │                    │                    │ sqlite: sqlite: Arbitrary code execution via corrupted FTS5  │
+│                    │                 │          │              │                    │                    │ index                                                        │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119374                  │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-119379 │          │              │                    │                    │ sqlite: sqlite: Arbitrary code execution via crafted session │
+│                    │                 │          │              │                    │                    │ changesets                                                   │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-119379                  │
 ├────────────────────┼─────────────────┼──────────┼──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
 │ libssl3            │ CVE-2026-31789  │ CRITICAL │ fixed        │ 3.0.14-1~deb12u2   │ 3.0.19-1~deb12u2   │ openssl: OpenSSL: Heap buffer overflow on 32-bit systems     │
 │                    │                 │          │              │                    │                    │ from large X.509 certificate...                              │
@@ -305,8 +547,8 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-45447  │          │              │                    │ 3.0.20-1~deb12u2   │ openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()       │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-45447                   │
-│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-84782  │          │ affected     │                    │                    │ openssl: compat-openssl: openssl: Information disclosure via │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-84782  │          │              │                    │ 3.0.22-1~deb12u2   │ openssl: compat-openssl: openssl: Information disclosure via │
 │                    │                 │          │              │                    │                    │ DTLS handshake retransmission                                │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-84782                   │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -322,41 +564,25 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │                 │          │              │                    │                    │ missing home-record signature verification                   │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-16742                   │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libuuid1           │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ libuuid1           │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78410                   │
 ├────────────────────┼─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│ mount              │ CVE-2026-53613  │          │              │                    │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ mount              │ CVE-2026-53613  │          │              │                    │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -400,12 +626,12 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-45447  │          │              │                    │ 3.0.20-1~deb12u2   │ openssl: Heap Use-After-Free in OpenSSL PKCS7_verify()       │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-45447                   │
-│                    ├─────────────────┤          ├──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-84782  │          │ affected     │                    │                    │ openssl: compat-openssl: openssl: Information disclosure via │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-84782  │          │              │                    │ 3.0.22-1~deb12u2   │ openssl: compat-openssl: openssl: Information disclosure via │
 │                    │                 │          │              │                    │                    │ DTLS handshake retransmission                                │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-84782                   │
-├────────────────────┼─────────────────┼──────────┼──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-base          │ CVE-2026-13221  │ CRITICAL │ fixed        │ 5.36.0-7+deb12u1   │ 5.36.0-7+deb12u4   │ perl: Perl: Incorrect regular expression processing via      │
+├────────────────────┼─────────────────┼──────────┤              ├────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-base          │ CVE-2026-13221  │ CRITICAL │              │ 5.36.0-7+deb12u1   │ 5.36.0-7+deb12u4   │ perl: Perl: Incorrect regular expression processing via      │
 │                    │                 │          │              │                    │                    │ large regular expressions                                    │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-13221                   │
 │                    ├─────────────────┤          │              │                    │                    ├──────────────────────────────────────────────────────────────┤
@@ -445,41 +671,25 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │                    │                 │          │              │                    │                    │ crafted tar header with large entry...                       │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-9538                    │
 ├────────────────────┼─────────────────┤          ├──────────────┼────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
-│ util-linux         │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ util-linux         │ CVE-2026-53613  │          │ affected     │ 2.38.1-5+deb12u1   │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78410                   │
 ├────────────────────┼─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│ util-linux-extra   │ CVE-2026-53613  │          │              │                    │                    │ util-linux: util-linux: TOCTOU in the mount program via      │
-│                    │                 │          │              │                    │                    │ ancestor directory swap on...                                │
+│ util-linux-extra   │ CVE-2026-53613  │          │              │                    │                    │ util-linux: TOCTOU in the mount program via ancestor         │
+│                    │                 │          │              │                    │                    │ directory swap on target...                                  │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53613                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-76642  │          │              │                    │                    │ util-linux: util-linux: failed external mount helper still   │
-│                    │                 │          │              │                    │                    │ runs privileged X-mount post-hooks                           │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76642                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78408  │          │              │                    │                    │ util-linux: util-linux: nsenter --join-cgroup leaks root     │
-│                    │                 │          │              │                    │                    │ cgroup migration authority                                   │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78408                   │
-│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
-│                    │ CVE-2026-78409  │          │              │                    │                    │ util-linux: util-linux: X-mount.subdir detached-tree         │
-│                    │                 │          │              │                    │                    │ resolution can escape via intermediate symlinks              │
-│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-78409                   │
+│                    │ CVE-2026-53615  │          │              │                    │                    │ util-linux: util-linux: Partition metadata compromise via    │
+│                    │                 │          │              │                    │                    │ integer overflow in DOS partition parser...                  │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-53615                   │
 │                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
 │                    │ CVE-2026-78410  │          │              │                    │                    │ util-linux: util-linux: restricted bind mounts do not pin    │
 │                    │                 │          │              │                    │                    │ the source, allowing X-mount.owner/group/mode...             │
@@ -488,24 +698,24 @@ Total: 117 (HIGH: 108, CRITICAL: 9)
 │ zlib1g             │ CVE-2023-45853  │ CRITICAL │ will_not_fix │ 1:1.2.13.dfsg-1    │                    │ zlib: integer overflow and resultant heap-based buffer       │
 │                    │                 │          │              │                    │                    │ overflow in zipOpenNewFileInZip4_6                           │
 │                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2023-45853                   │
+│                    ├─────────────────┼──────────┼──────────────┤                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-76844  │ HIGH     │ affected     │                    │                    │ webpack-dev-middleware: webpack-dev-middleware: Information  │
+│                    │                 │          │              │                    │                    │ Disclosure via Path Traversal                                │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-76844                   │
+│                    ├─────────────────┤          │              │                    ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2026-85091  │          │              │                    │                    │ zlib: zlib: Heap buffer overflow in gz_vacate() allows       │
+│                    │                 │          │              │                    │                    │ arbitrary code execution                                     │
+│                    │                 │          │              │                    │                    │ https://avd.aquasec.com/nvd/cve-2026-85091                   │
 └────────────────────┴─────────────────┴──────────┴──────────────┴────────────────────┴────────────────────┴──────────────────────────────────────────────────────────────┘
 
 Python (python-pkg)
 ===================
-Total: 7 (HIGH: 7, CRITICAL: 0)
+Total: 11 (HIGH: 11, CRITICAL: 0)
 
 ┌───────────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
 │        Library        │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                            │
 ├───────────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
-│ Flask (METADATA)      │ CVE-2023-30861 │ HIGH     │ fixed  │ 2.0.1             │ 2.3.2, 2.2.5  │ flask: Possible disclosure of permanent session cookie due  │
-│                       │                │          │        │                   │               │ to missing Vary: Cookie...                                  │
-│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-30861                  │
-├───────────────────────┼────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
-│ Werkzeug (METADATA)   │ CVE-2023-25577 │          │        │                   │ 2.2.3         │ python-werkzeug: high resource usage when parsing multipart │
-│                       │                │          │        │                   │               │ form data with many fields...                               │
-│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-25577                  │
-│                       ├────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
-│                       │ CVE-2024-34069 │          │        │                   │ 3.0.3         │ python-werkzeug: user may execute code on a developer's     │
+│ Werkzeug (METADATA)   │ CVE-2024-34069 │ HIGH     │ fixed  │ 2.2.3             │ 3.0.3         │ python-werkzeug: user may execute code on a developer's     │
 │                       │                │          │        │                   │               │ machine                                                     │
 │                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-34069                  │
 ├───────────────────────┼────────────────┤          │        ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
@@ -521,38 +731,31 @@ Total: 7 (HIGH: 7, CRITICAL: 0)
 │                       │                │          │        │                   │               │ PackageIndex                                                │
 │                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-47273                  │
 ├───────────────────────┼────────────────┤          │        ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ urllib3 (METADATA)    │ CVE-2025-66418 │          │        │ 2.2.3             │ 2.6.0         │ urllib3: urllib3: Unbounded decompression chain leads to    │
+│                       │                │          │        │                   │               │ resource exhaustion                                         │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-66418                  │
+│                       ├────────────────┤          │        │                   │               ├─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2025-66471 │          │        │                   │               │ urllib3: urllib3 Streaming API improperly handles highly    │
+│                       │                │          │        │                   │               │ compressed data                                             │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-66471                  │
+│                       ├────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2026-21441 │          │        │                   │ 2.6.3         │ urllib3: urllib3 vulnerable to decompression-bomb safeguard │
+│                       │                │          │        │                   │               │ bypass when following HTTP redirects (streaming...          │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-21441                  │
+│                       ├────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2026-44431 │          │        │                   │ 2.7.0         │ urllib3: urllib3: Information disclosure via cross-origin   │
+│                       │                │          │        │                   │               │ redirects forwarding sensitive headers                      │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-44431                  │
+│                       ├────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2026-97687 │          │        │                   │ 2.8.0         │ urllib3: urllib3: Traffic interception via HTTPS proxy TLS  │
+│                       │                │          │        │                   │               │ configuration override                                      │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-97687                  │
+│                       ├────────────────┤          │        │                   │               ├─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2026-97689 │          │        │                   │               │ urllib3: urllib3: Denial of Service via unbounded memory    │
+│                       │                │          │        │                   │               │ allocation in chunk parser...                               │
+│                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-97689                  │
+├───────────────────────┼────────────────┤          │        ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
 │ wheel (METADATA)      │ CVE-2026-24049 │          │        │ 0.44.0            │ 0.46.2        │ wheel: wheel: Privilege Escalation or Arbitrary Code        │
 │                       │                │          │        │                   │               │ Execution via malicious wheel file...                       │
 │                       │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-24049                  │
 └───────────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
-
-app:vulnerable (secrets)
-========================
-Total: 2 (HIGH: 0, CRITICAL: 2)
-
-CRITICAL: Stripe (stripe-secret-token)
-════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-Stripe Secret Key
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- app:vulnerable:123 (offset: 6920 bytes)
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- 121     "PYTHON_VERSION=3.8.20",
- 122     "DATABASE_URL=postgres://admin:SuperSecretPassword123@db:5432/appdb",
- 123 [   "API_SECRET_KEY=**************************"
- 124     ],
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-
-CRITICAL: Stripe (stripe-secret-token)
-════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-Stripe Secret Key
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- app:vulnerable:67 (offset: 5167 bytes)
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-  65     {
-  66     "created": "2026-10-14T07:59:09Z",
-  67 [   "created_by": "ENV API_SECRET_KEY=**************************",
-  68     "comment": "buildkit.dockerfile.v0",
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-
