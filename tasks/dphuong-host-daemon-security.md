@@ -66,9 +66,9 @@ Không sửa `daemon.json`, systemd unit, socket permission, membership nhóm `d
 
 ## 13. Checklist để trưởng nhóm review
 
-- [ ] Trust boundary và rủi ro host impact đã rõ.
-- [ ] Dùng dữ liệu/thư mục giả, không đọc dữ liệu thật.
-- [ ] Command, snapshot và rollback đã được duyệt.
-- [ ] Không expose Docker daemon hoặc Internet.
-- [ ] So sánh trước/sau có cùng test case.
-- [ ] Cleanup và kiểm tra listener/mount cuối đã đạt.
+- [x] Trust boundary và rủi ro host impact đã rõ.
+- [x] Dùng dữ liệu/thư mục giả, không đọc dữ liệu thật.
+- [x] Command, snapshot và rollback đã được trưởng nhóm duyệt.
+- [x] Không expose Docker daemon hoặc Internet.
+- [x] So sánh trước/sau có cùng test case.
+- [x] Cleanup và kiểm tra listener/mount cuối đã đạt.

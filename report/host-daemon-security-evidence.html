@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Host &amp; Daemon Security Evidence</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#0b1020;color:#d8dee9;font-family:Arial,sans-serif}
+    .shot{display:none;width:1400px;height:900px;padding:54px;background:linear-gradient(135deg,#0b1020,#16213a)}
+    .shot.active{display:block} h1{margin:0 0 10px;color:#7dd3fc;font-size:34px}
+    .meta{color:#94a3b8;margin-bottom:30px;font-size:18px} pre{margin:0;padding:30px;border:1px solid #334155;border-radius:14px;background:#020617;color:#e2e8f0;font:21px/1.55 "DejaVu Sans Mono",monospace;white-space:pre-wrap}
+    .pass{color:#86efac}.warn{color:#fde68a} footer{margin-top:22px;color:#64748b;font-size:16px}
+  </style>
+</head>
+<body>
+  <section class="shot" data-shot="1"><h1>01 — Docker socket metadata</h1><div class="meta">HS-02 / HS-03 · Chỉ đọc metadata từ host</div><pre>$ stat /var/run/docker.sock
+mode=660 owner=root group=docker type=socket
+
+$ docker context show
+default
+
+SecurityOptions:
+  apparmor
+  seccomp, profile=builtin
+  cgroupns
+
+<span class="pass">PASS: socket không được mount/used từ container
+PASS: group membership không thay đổi</span></pre></section>
+  <section class="shot" data-shot="2"><h1>02 — Before: bind mount read-write</h1><div class="meta">HS-01 · Dữ liệu giả, UID/GID 1000:1000</div><pre>User=1000:1000  Privileged=false  Devices=null
+Mount=/host-data  RW=true  Type=bind
+
+$ cat /host-data/sample.txt
+Dữ liệu giả dùng để kiểm tra bind mount Docker Host Security LAB.
+BEFORE_READ_RC=0
+
+$ echo before-write &gt; /host-data/before-write.txt
+BEFORE_WRITE_RC=0
+HOST_SIDE_CONTENT=before-write
+
+<span class="pass">RESULT: PASS — RW cho phép thay đổi dữ liệu host trong mount</span></pre></section>
+  <section class="shot" data-shot="3"><h1>03 — Hardened: bind mount read-only</h1><div class="meta">HS-01 · Cùng image, user, input và network</div><pre>User=1000:1000  Privileged=false  Devices=null
+Mount=/host-data  RW=false  Type=bind
+
+$ cat /host-data/sample.txt
+Dữ liệu giả dùng để kiểm tra bind mount Docker Host Security LAB.
+HARDENED_READ_RC=0
+
+$ echo retest &gt; /host-data/retest.txt
+HARDENED_WRITE_RC=2
+sh: cannot create /host-data/retest.txt: Read-only file system
+
+<span class="pass">RESULT: PASS — đọc được, ghi bị chặn</span></pre></section>
+  <section class="shot" data-shot="4"><h1>04 — Host/container isolation</h1><div class="meta">HS-02 / HS-05 · Cùng kết quả ở Before và Retest</div><pre>Privileged=false
+PidMode=
+NetworkMode=docker-security-lab
+Devices=null
+Mount=/host-data only
+
+$ test -S /var/run/docker.sock
+SOCKET_PRESENT_RC=1  (1 means absent)
+
+<span class="pass">PASS: không host PID, device hoặc Docker socket mount</span></pre></section>
+  <section class="shot" data-shot="5"><h1>05 — Docker TCP API</h1><div class="meta">HS-04 · Kiểm tra trước và sau LAB</div><pre><span class="pass">[BEFORE]
+PASS: no listener 2375/2376
+
+[AFTER]
+PASS: no listener 2375/2376</span>
+
+Docker daemon tiếp tục dùng Unix socket.
+Không sửa daemon.json, systemd hoặc firewall.</pre></section>
+  <section class="shot" data-shot="6"><h1>06 — Baseline sau cleanup</h1><div class="meta">Không còn tài nguyên tạm hoặc sai lệch baseline</div><pre><span class="pass">PASS: Docker Engine server is 28.5.2
+PASS: Docker Compose Plugin is 2.40.3
+PASS: Docker network internal, 172.30.0.0/24
+PASS: IPv4 default route is absent
+PASS: External IPv4 route is absent
+PASS: Docker TCP API listeners are absent
+PASS: No containers exist in baseline state
+
+Summary: failures=0 warnings=0
+RESULT: PASS</span></pre></section>
+  <script>const s=new URLSearchParams(location.search).get('shot')||'1';document.querySelector(`[data-shot="${s}"]`).classList.add('active')</script>
+</body>
+</html>

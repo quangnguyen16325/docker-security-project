@@ -1,0 +1,23 @@
+services:
+  lab:
+    image: ubuntu@sha256:2198e4c65076e9cb0b3d695219df667c0e3b0072da64ca3c2648aca17dcecaf5
+    pull_policy: never
+    command: ["sleep", "infinity"]
+    user: "1000:1000"
+    privileged: false
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    volumes:
+      - ./lab-data:/host-data:rw
+    networks:
+      - lab
+
+networks:
+  lab:
+    external: true
+    name: docker-security-lab
