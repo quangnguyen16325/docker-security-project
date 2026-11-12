@@ -31,9 +31,9 @@ image, input và Docker network.
 - Image đã được tải trước trong maintenance window và pin bằng digest.
 - `compose.before.yml` và `compose.hardened.yml` đã được kiểm tra cú pháp.
 - `lab-data/sample.txt` là dữ liệu giả duy nhất được mount vào container.
-- `evidence/` chỉ chứa `.gitkeep`; output thực nghiệm không commit mặc định.
+- Output thực nghiệm trong `evidence/` được giữ cục bộ và không commit mặc định.
 
-## Lệnh thực hành — chưa được chạy trong bước chuẩn bị
+## Lệnh tái hiện
 
 Chạy từ thư mục này trên Ubuntu Docker VM.
 
@@ -68,6 +68,26 @@ sudo docker compose -f compose.hardened.yml down
 
 Ở retest, ghi vào `/data` phải thất bại; ghi vào `/tmp` phải thành công. Không
 tiếp tục nếu hành vi khác expected result.
+
+### So sánh privileged và unprivileged
+
+Test `CS-06` chỉ đọc trạng thái tiến trình. Hai container không có network,
+mount, port hoặc Docker socket; root filesystem đặt read-only và container được
+xóa ngay sau test.
+
+```bash
+IMAGE='ubuntu@sha256:2198e4c65076e9cb0b3d695219df667c0e3b0072da64ca3c2648aca17dcecaf5'
+
+sudo docker run --rm --network none --read-only "$IMAGE" \
+  sh -c 'id; grep -E "^(CapEff|NoNewPrivs|Seccomp):" /proc/self/status'
+
+sudo docker run --rm --network none --read-only --privileged "$IMAGE" \
+  sh -c 'id; grep -E "^(CapEff|NoNewPrivs|Seccomp):" /proc/self/status'
+```
+
+Không thêm volume, thiết bị, Docker socket hoặc lệnh thay đổi host vào test này.
+Kết quả đã quan sát: privileged cấp tập capability rất rộng và không áp dụng
+Seccomp filter mặc định.
 
 ## Cleanup và kiểm tra cuối
 

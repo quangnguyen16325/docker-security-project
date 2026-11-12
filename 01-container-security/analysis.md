@@ -8,8 +8,8 @@ thống của host.
 
 ## Before
 
-Đã thực hiện ngày `2026-11-12` trên Ubuntu Docker VM. Container chạy bằng
-`UID 0`, giữ bộ capability mặc định (`CapEff=00000000a80425fb`), có
+Đã thực hiện trên Ubuntu Docker VM. Container chạy bằng `UID 0`, giữ bộ
+capability mặc định (`CapEff=00000000a80425fb`), có
 `NoNewPrivs=0`, ghi được vào bind mount `/data` và root filesystem. Container
 không chạy ở chế độ privileged. Kết quả này chứng minh cấu hình Before cấp
 nhiều quyền hơn nhu cầu của workload mẫu, không chứng minh container escape.
@@ -27,7 +27,7 @@ Các thay đổi duy nhất giữa hai cấu hình:
 
 ## Retest
 
-Retest ngày `2026-11-12` đạt toàn bộ kỳ vọng:
+Retest đạt toàn bộ kỳ vọng:
 
 - Tiến trình chạy bằng `UID/GID 10001`, không phải root.
 - `CapEff=0000000000000000` và `NoNewPrivs=1`.
@@ -39,9 +39,21 @@ Sau kiểm thử, Compose stack đã được gỡ. Script kiểm tra baseline t
 `failures=0`, `warnings=0`; không còn container, default route hoặc listener
 Docker TCP `2375/2376`.
 
+## Privileged và unprivileged
+
+Test `CS-06` dùng cùng image và lệnh chỉ đọc. Cả hai container đều có
+`network=none`, root filesystem read-only, không mount, không port và không
+Docker socket. Container unprivileged có `CapEff=00000000a80425fb` và
+`Seccomp=2`; container privileged có `CapEff=000001ffffffffff` và `Seccomp=0`.
+
+Kết quả cho thấy `--privileged` mở rộng mạnh tập capability và vô hiệu hóa
+Seccomp filter mặc định. Test không thực hiện thao tác đặc quyền hoặc tác động
+host. Hai container đã được xóa và baseline sau test vẫn đạt.
+
 Log bằng chứng cục bộ trong VM:
 `evidence/20261112-CS-before.txt` và
-`evidence/20261112-CS-hardened-retest.txt`. Thư mục evidence bị loại khỏi Git.
+`evidence/20261112-CS-hardened-retest.txt`, cùng log
+`evidence/CS-06-privileged-comparison.txt`. Thư mục evidence bị loại khỏi Git.
 
 ## Giới hạn
 

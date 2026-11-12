@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Container Security LAB Evidence</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b1020; color: #d8dee9; font-family: Arial, sans-serif; }
+    .shot { display: none; width: 1400px; height: 900px; padding: 54px; background: linear-gradient(135deg,#0b1020,#16213a); }
+    .shot.active { display: block; }
+    h1 { margin: 0 0 10px; color: #7dd3fc; font-size: 34px; }
+    .meta { color: #94a3b8; margin-bottom: 30px; font-size: 18px; }
+    pre { margin: 0; padding: 30px; border: 1px solid #334155; border-radius: 14px; background: #020617; color: #e2e8f0; font: 21px/1.55 "DejaVu Sans Mono", monospace; white-space: pre-wrap; }
+    .pass { color: #86efac; }
+    .warn { color: #fde68a; }
+    footer { margin-top: 22px; color: #64748b; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <section class="shot" data-shot="1">
+    <h1>01 — Baseline trước thực nghiệm</h1>
+    <div class="meta">Bản trích log đã làm sạch · Ubuntu Docker VM</div>
+    <pre>$ ip -4 route show default
+
+$ docker ps -aq
+
+$ docker network inspect docker-security-lab --format '{{.Internal}}'
+true
+
+<span class="pass">PASS: no IPv4 default route
+PASS: no existing containers
+PASS: docker-security-lab internal=true</span></pre>
+    <footer>Không hiển thị credential, MAC address hoặc dữ liệu cá nhân.</footer>
+  </section>
+
+  <section class="shot" data-shot="2">
+    <h1>02 — Root và non-root</h1>
+    <div class="meta">CS-01 · Before so với Hardened/Retest</div>
+    <pre><span class="warn">[BEFORE]</span>
+$ docker compose -f compose.before.yml exec -T lab id
+uid=0(root) gid=0(root) groups=0(root)
+
+<span class="pass">[HARDENED / RETEST]</span>
+$ docker compose -f compose.hardened.yml exec -T lab id
+uid=10001 gid=10001 groups=10001
+
+RESULT: PASS — tiến trình không còn chạy bằng UID 0</pre>
+  </section>
+
+  <section class="shot" data-shot="3">
+    <h1>03 — Capabilities và no-new-privileges</h1>
+    <div class="meta">CS-02 và CS-04 · Before so với Hardened/Retest</div>
+    <pre><span class="warn">[BEFORE]</span>
+CapEff:       00000000a80425fb
+NoNewPrivs:  0
+
+<span class="pass">[HARDENED / RETEST]</span>
+CapEff:       0000000000000000
+NoNewPrivs:  1
+
+Config: CapDrop=["ALL"]
+Config: SecurityOpt=["no-new-privileges:true"]
+
+RESULT: PASS</pre>
+  </section>
+
+  <section class="shot" data-shot="4">
+    <h1>04 — Bind mount read-write và read-only</h1>
+    <div class="meta">CS-03 · Cùng dữ liệu và cùng đường dẫn /data</div>
+    <pre><span class="warn">[BEFORE — RW]</span>
+$ echo before-write &gt; /data/before-write.txt
+$ cat /data/before-write.txt
+before-write
+
+<span class="pass">[HARDENED / RETEST — RO]</span>
+$ echo retest &gt; /data/retest.txt
+sh: cannot create /data/retest.txt: Read-only file system
+DATA_WRITE_RC=2
+
+RESULT: PASS — dữ liệu vẫn đọc được, thao tác ghi bị chặn</pre>
+  </section>
+
+  <section class="shot" data-shot="5">
+    <h1>05 — Root filesystem và vùng ghi tạm</h1>
+    <div class="meta">CS-05 · Chặn ghi không cần thiết nhưng giữ chức năng hợp lệ</div>
+    <pre>$ echo retest &gt; /root/retest.txt
+sh: cannot create /root/retest.txt: Permission denied
+ROOTFS_WRITE_RC=2
+
+$ echo retest &gt; /tmp/retest.txt &amp;&amp; cat /tmp/retest.txt
+retest
+TMP_WRITE_RC=0
+
+Config: ReadonlyRootfs=true
+Config: tmpfs /tmp:rw,noexec,nosuid,size=16m
+
+<span class="pass">RESULT: PASS</span></pre>
+  </section>
+
+  <section class="shot" data-shot="6">
+    <h1>06 — Kiểm tra baseline sau cleanup</h1>
+    <div class="meta">Không còn tài nguyên tạm hoặc thay đổi ngoài phạm vi</div>
+    <pre><span class="pass">PASS: OS is Ubuntu 24.04
+PASS: Docker Engine server is 28.5.2
+PASS: Docker Compose Plugin is 2.40.3
+PASS: Docker network is internal with subnet 172.30.0.0/24
+PASS: IPv4 default route is absent
+PASS: External IPv4 route is absent
+PASS: Docker TCP API listeners 2375/2376 are absent
+PASS: No containers exist in baseline state
+
+Summary: failures=0 warnings=0
+RESULT: PASS</span></pre>
+  </section>
+
+  <section class="shot" data-shot="7">
+    <h1>07 — Privileged và unprivileged</h1>
+    <div class="meta">CS-06 · network=none · rootfs read-only · không mount/port/socket</div>
+    <pre><span class="pass">[UNPRIVILEGED]</span>
+Privileged=false  ReadonlyRootfs=true  MountCount=0
+CapEff:   00000000a80425fb
+Seccomp:  2
+
+<span class="warn">[PRIVILEGED]</span>
+Privileged=true   ReadonlyRootfs=true  MountCount=0
+CapEff:   000001ffffffffff
+Seccomp:  0
+
+EXPECTATION_FAILURES=0
+RESULT: PASS — privileged mở rộng capability và tắt Seccomp mặc định</pre>
+    <footer>Test chỉ đọc trạng thái; container đã được xóa ngay sau kiểm tra.</footer>
+  </section>
+
+  <script>
+    const shot = new URLSearchParams(location.search).get('shot') || '1';
+    document.querySelector(`[data-shot="${shot}"]`).classList.add('active');
+  </script>
+</body>
+</html>
