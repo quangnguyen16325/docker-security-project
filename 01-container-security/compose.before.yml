@@ -1,0 +1,17 @@
+services:
+  lab:
+    image: ubuntu@sha256:2198e4c65076e9cb0b3d695219df667c0e3b0072da64ca3c2648aca17dcecaf5
+    pull_policy: never
+    command: ["sleep", "infinity"]
+    user: "0:0"
+    privileged: false
+    restart: "no"
+    stop_grace_period: 5s
+    volumes:
+      - ./lab-data:/data:rw
+    networks:
+      - docker-security-lab
+
+networks:
+  docker-security-lab:
+    external: true
